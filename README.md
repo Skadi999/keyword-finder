@@ -31,3 +31,31 @@ It then scans the files and tells you whether the keyword was found or not.
 In modes where it's possible to specify excluded and preferred files, they are always optional.
 
 Results are printed to an output file (by default, output.txt) and also written to the console.
+
+## How to run
+
+It is nice to use python virtual environment not to pollute global one.
+
+## Python version
+
+Python version used to built the program: **Python 3.10.4**
+
+### Generate virtual environment
+
+1. Go to the project directory `keyword-finder`
+2. Make sure you are in the root
+3. Run `python -m venv env`.
+
+### Use the python virtual environment
+
+Windows: `env\Scripts\activate.bat`
+
+Unix or MacOS: `source env/bin/activate`
+
+### Install required packages
+
+Inside virtual environment run: `pip install -r requirements.txt`
+
+### Run the program
+
+Inside virtual environment: `python main.py`
