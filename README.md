@@ -1,9 +1,17 @@
 # keyword-finder
-Small GUI program for finding specified keywords in a set of specified files.
+A GUI program for finding specified keywords in a set of specified files.
 
 This desktop app was made with Python and the PySide Qt framework.
 It is used to scan text files for specified keywords.
 It works exclusively with tab-separated .txt files.
+
+The need for this app arose while I was making a modification for the game Diablo II. Modifying items, attributes, monsters, and other data in the game involves
+editing tab-separated .txt files. One such file, itemstatcost.txt, stores all the attributes/stats in the game. I needed to add some attributes, but the problem is that
+itemstatcost.txt is, unfortunately, limited to 512 rows and it had reached its limit. There is no feasible way to remove this limitation, so the only thing I could've done
+was to remove some rows. I knew for a fact there were some unused rows in the file, but I didn't know which ones, and checking manually is a painful task, because I would have
+to check the 91 other files for each of the 512 rows to see which ones are unused. That's when the idea to make this app came to be. The fourth mode of this app (see below)
+does exactly what I needed to, it takes each row from a file (more specifically, the first column of each row - the name column) and checks all the other files in the same
+directory to see whether the scanned entry is used in any of the other files.
 
 It has five modes of operation:
 1. Find Keyword in Files: The simplest mode, you specify a keyword (only one is allowed) and files to scan. 
